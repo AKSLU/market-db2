@@ -67,9 +67,6 @@ def buy(item_id):
 
     return redirect('/items')
 
-
-    return redirect('/items')
-
 if __name__ == '__main__':
     app.run(debug=True)
 
