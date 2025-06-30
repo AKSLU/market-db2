@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Личный кабинет</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+        }
+        li {
+            background-color: #f1f1f1;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>История покупок</h1>
+    <ul>
+        {% for buy in buys %}
+            <li>
+                <strong>ID:</strong> {{ buy[0] }}<br>
+                <strong>Дата:</strong> {{ buy[1] }}<br>
+                <strong>Товар:</strong> {{ buy[2] }}<br>
+                <strong>Стоимость:</strong> {{ buy[3] }}₸
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/items">Назад к товарам</a>
+</body>
+</html>
+
